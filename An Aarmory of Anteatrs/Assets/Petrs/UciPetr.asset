@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 328fe03f37b279c41a553593ad6a4f2c, type: 3}
-  m_Name: UciPetr
+  m_Name: UCIPetr
   m_EditorClassIdentifier: 
-  petrImage: {fileID: 21300000, guid: 08d1265b5afb4ae4f84531c47b5069c4, type: 3}
-  rarity: 1
+  petrImage: {fileID: 21300000, guid: 7eda59c8179445943a7c84e4fd75ff0d, type: 3}
+  rarity: 0
   title: UCI Petr
-  subtitle: He studies.
+  subtitle: Finals approaching. He's stressed.
   id: 3

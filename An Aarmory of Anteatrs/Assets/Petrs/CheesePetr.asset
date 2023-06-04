@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328fe03f37b279c41a553593ad6a4f2c, type: 3}
   m_Name: CheesePetr
   m_EditorClassIdentifier: 
-  petrImage: {fileID: 21300000, guid: 44c88a59e65703b4eb60783fc0f31b19, type: 3}
-  rarity: 4
+  petrImage: {fileID: 21300000, guid: dec0c046820ff614d814492f5f4c5383, type: 3}
+  rarity: 1
   title: Cheese Petr
-  subtitle: He eats cheese.
+  subtitle: He keeps munching
+  id: 1
