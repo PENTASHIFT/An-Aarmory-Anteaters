@@ -14,6 +14,7 @@ public class Currency : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData gameData){
         this.currency = gameData.currency;
+        Debug.LogFormat("{0}", this.currency);
     }
 
     public void SaveData(GameData gameData){
@@ -22,10 +23,10 @@ public class Currency : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        currencyText.text = "" + currency;
+        currencyText.text = "Currency: " + currency;
     }
 
-    public void AddCurrency(){
-        currency += 10;
+    public void AddCurrency(int amt){
+        currency += amt;
     }
 }

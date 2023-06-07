@@ -60,11 +60,11 @@ public class StepController : MonoBehaviour
             // rdv = StepCounter.current.stepCounter.ReadDefaultValue();
             // rvfpf = StepCounter.current.stepCounter.ReadValueFromPreviousFrame();
 
-            text.text = $"Step Counter (Working): { StepCounter.current.stepCounter.ReadValue() }";
+            text.text = $"Steps: { StepCounter.current.stepCounter.ReadValue() }";
         }
         else
         {
-            text.text = "Step Counter: Null";
+            text.text = "Steps: Null";
         }
 
 // #if UNITY_ANDROID

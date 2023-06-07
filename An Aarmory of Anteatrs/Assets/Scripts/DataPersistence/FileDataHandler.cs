@@ -33,7 +33,7 @@ public class FileDataHandler
         try{
             if(File.Exists(fullPath)){
                 Debug.Log("Data Exists. Deleting old file and writing a new one!");
-                File.Delete(fullPath);
+                // File.Delete(fullPath);
             }else{
                 Debug.Log("Writing File for the first time!");
             }
