@@ -79,10 +79,10 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
     }
 
     public void LoadData(GameData gameData){
-        this.petrsDictionary = gameData.amountOfPetrs;
+        this.petrsDictionary = gameData.petrDictionary;
     }
 
     public void SaveData(GameData gameData){
-        gameData.amountOfPetrs = this.petrsDictionary;
+        gameData.petrDictionary = this.petrsDictionary;
     }
 }
