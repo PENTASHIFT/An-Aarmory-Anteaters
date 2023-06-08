@@ -19,7 +19,6 @@ public class CameraController : MonoBehaviour
     private Texture defaultBackground;
 
     public RawImage background;
-    public AspectRatioFitter fit;
 
     string QrCode = string.Empty;
 
@@ -28,6 +27,7 @@ public class CameraController : MonoBehaviour
 
         // defaultBackground = background.texture;
         WebCamDevice[] devices = WebCamTexture.devices;
+        Debug.LogFormat("background: {0}", background.enabled);
         
         if (0 == devices.Length)
         {
@@ -52,28 +52,10 @@ public class CameraController : MonoBehaviour
             return;
         }
 
-        // backCam.Play();
-        // background.texture = backCam;
-
         camAvailable = true;
     }
 
-    void Update()
-    {
-        // if (!camAvailable)
-        //     return;
-
-        // float ratio = (float)backCam.width / (float)backCam.height;
-        // fit.aspectRatio = ratio;
-
-        // float scaleY = backCam.videoVerticallyMirrored ? -1f : 1f;
-        // background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
-
-        // int orient = -backCam.videoRotationAngle;
-        // background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
-    }
-
-    public void StartStopCamera()
+    public void StartCamera()
     {
         Debug.LogFormat("background: {0} {1}",
         background.rectTransform.rect.height, background.enabled);
@@ -81,32 +63,20 @@ public class CameraController : MonoBehaviour
         if (!camAvailable)
         {
             Debug.Log("No camera available.");
-            background.enabled = true;
+            // background.enabled = true;
             return;
         }
-
-        if (camRunning)
-        {
-            // Stop Camera.
-            Debug.Log("foo");
-            backCam.Stop();
-            background.enabled = false;
-            camRunning = false;
-        }
-        else
-        {
-            background.enabled = true;
-            backCam.Play();
-            background.texture = backCam;
-            camRunning = true;
-
-            StartCoroutine(GetQRCode());
-        }
+        
+        StartCoroutine(GetQRCode());
+        background.enabled = true;
     }
 
     IEnumerator GetQRCode()
     {
-        Debug.Log("Bar!");
+        backCam.Play();
+        background.enabled = true;
+        background.texture = backCam;
+
         IBarcodeReader barCodeReader = new BarcodeReader();
         var snap = new Texture2D(backCam.width, backCam.height, TextureFormat.ARGB32, false);
 
@@ -126,11 +96,16 @@ public class CameraController : MonoBehaviour
                         break;
                     }
                 }
+
             }
             catch (Exception ex) { Debug.LogWarning(ex.Message); }
 
-            yield return null;
+            yield return new WaitForSeconds(1);
+            // yield return null;
         }
+
+        backCam.Stop();
+        background.enabled = false;
 
         QrCode = string.Empty;
     }
