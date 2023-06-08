@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AngelPetr
   m_EditorClassIdentifier: 
   petrImage: {fileID: 21300000, guid: cdbc19d5731d05a43b6c8a565372d3ca, type: 3}
-  rarity: 2
+  rarity: 3
   title: Angel Petr
   subtitle: He's always watching over you.
   id: 0
