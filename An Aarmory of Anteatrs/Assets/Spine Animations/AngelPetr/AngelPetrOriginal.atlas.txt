@@ -1,0 +1,53 @@
+AngelPetrOriginal.png
+size:2014,2014
+filter:Linear,Linear
+pma:true
+Background
+bounds:2,1008,1004,1004
+Blue Hue
+bounds:2,2,1004,1004
+Bottom Left Wing
+bounds:1008,1008,1004,1004
+Bottom Right Wing
+bounds:1008,2,1004,1004
+
+AngelPetrOriginal_2.png
+size:2014,2014
+filter:Linear,Linear
+pma:true
+Face
+bounds:2,1008,1004,1004
+Iris
+bounds:2,2,1004,1004
+Mid Left Wing
+bounds:1008,1008,1004,1004
+Mid Right Wing
+bounds:1008,2,1004,1004
+
+AngelPetrOriginal_3.png
+size:2014,2014
+filter:Linear,Linear
+pma:true
+Pupil
+bounds:2,1008,1004,1004
+Red Little Eyes
+bounds:2,2,1004,1004
+Top Left Wing Base
+bounds:1008,1008,1004,1004
+Top Left Wing Ends
+bounds:1008,2,1004,1004
+
+AngelPetrOriginal_4.png
+size:2014,1097
+filter:Linear,Linear
+pma:true
+Left Ear
+bounds:2,2,87,116
+rotate:90
+Right Ear
+bounds:120,23,66,111
+rotate:90
+Top Right Wing Base
+bounds:2,91,1004,1004
+Top Right Wing Ends
+bounds:1008,91,1004,1004
