@@ -6,10 +6,10 @@ using UnityEngine;
 public class GameData
 {
     public int currency;
-    public Dictionary<int, int> amountOfPetrs;
+    public Dictionary<int, int> petrDictionary;
 
     public GameData(){
         this.currency = 0;
-        this.amountOfPetrs = new Dictionary<int, int>();
+        this.petrDictionary = new Dictionary<int, int>();
     }
 }

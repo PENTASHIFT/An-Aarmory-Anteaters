@@ -43,17 +43,19 @@ public class DataPersistenceManager : MonoBehaviour
         foreach(IDataPersistence dataPersistenceObj in dataPersistenceObjects){
             dataPersistenceObj.LoadData(gameData);
         }
-        Debug.Log("Loaded Data = " + gameData.currency);
+        Debug.Log("Everything Loaded!");
     }
     public void SaveGame(){
-        //send gameData obj to all interfaces and make them save data
-        foreach(IDataPersistence dataPersistenceObj in dataPersistenceObjects){
-            dataPersistenceObj.SaveData(gameData);
-        }
-        Debug.Log("New Saved Data = " + gameData.currency);
+        if(gameData != null){
+            //send gameData obj to all interfaces and make them save data
+            foreach(IDataPersistence dataPersistenceObj in dataPersistenceObjects){
+                dataPersistenceObj.SaveData(gameData);
+            }
+            Debug.Log("All Data Saved");
 
-        //write to file
-        dataHandler.Save(gameData);
+            //write to file
+            dataHandler.Save(gameData);
+        }
     }
 
     private void OnApplicationQuit() {
