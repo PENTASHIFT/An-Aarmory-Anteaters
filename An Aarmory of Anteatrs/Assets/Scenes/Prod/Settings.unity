@@ -229,6 +229,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73938474}
   m_CullTransparentMesh: 1
+--- !u!1 &74707102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 74707104}
+  - component: {fileID: 74707103}
+  m_Layer: 0
+  m_Name: DataPersistenceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &74707103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74707102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232018639c500bb48ba62fedb5fb0eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storageFileName: data.json
+--- !u!4 &74707104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74707102}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 550.5, y: 293.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &96956673
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,15 +334,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Claim By Location
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 560c12ff66245f642a0e82cf6298e919, type: 2}
-  m_sharedMaterial: {fileID: 4946771042736959522, guid: 560c12ff66245f642a0e82cf6298e919, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 87b07f1049c13da4a9d28ac46dc70452, type: 2}
+  m_sharedMaterial: {fileID: 1396941026860947060, guid: 87b07f1049c13da4a9d28ac46dc70452, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282138452
-  m_fontColor: {r: 0.32941177, g: 0.24705882, b: 0.23529412, a: 1}
+    rgba: 4281809483
+  m_fontColor: {r: 0.29411766, g: 0.22745098, b: 0.21568628, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -906,15 +951,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Scan QR Code
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 560c12ff66245f642a0e82cf6298e919, type: 2}
-  m_sharedMaterial: {fileID: 4946771042736959522, guid: 560c12ff66245f642a0e82cf6298e919, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 87b07f1049c13da4a9d28ac46dc70452, type: 2}
+  m_sharedMaterial: {fileID: 1396941026860947060, guid: 87b07f1049c13da4a9d28ac46dc70452, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282138452
-  m_fontColor: {r: 0.32941177, g: 0.24705882, b: 0.23529412, a: 1}
+    rgba: 4281809483
+  m_fontColor: {r: 0.29411766, g: 0.22745098, b: 0.21568628, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1032,6 +1077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3240881bdc825b24796b74b8f468f44e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currency: 50000
   currencyText: {fileID: 803213028}
 --- !u!114 &803213028
 MonoBehaviour:
@@ -1055,8 +1101,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Currency: \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 560c12ff66245f642a0e82cf6298e919, type: 2}
-  m_sharedMaterial: {fileID: 4946771042736959522, guid: 560c12ff66245f642a0e82cf6298e919, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 87b07f1049c13da4a9d28ac46dc70452, type: 2}
+  m_sharedMaterial: {fileID: 1396941026860947060, guid: 87b07f1049c13da4a9d28ac46dc70452, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1234,15 +1280,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sound Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 560c12ff66245f642a0e82cf6298e919, type: 2}
-  m_sharedMaterial: {fileID: 4946771042736959522, guid: 560c12ff66245f642a0e82cf6298e919, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 87b07f1049c13da4a9d28ac46dc70452, type: 2}
+  m_sharedMaterial: {fileID: 1396941026860947060, guid: 87b07f1049c13da4a9d28ac46dc70452, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282138452
-  m_fontColor: {r: 0.32941177, g: 0.24705882, b: 0.23529412, a: 1}
+    rgba: 4281809483
+  m_fontColor: {r: 0.29411766, g: 0.22745098, b: 0.21568628, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2166,8 +2212,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Steps: \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 560c12ff66245f642a0e82cf6298e919, type: 2}
-  m_sharedMaterial: {fileID: 4946771042736959522, guid: 560c12ff66245f642a0e82cf6298e919, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 87b07f1049c13da4a9d28ac46dc70452, type: 2}
+  m_sharedMaterial: {fileID: 1396941026860947060, guid: 87b07f1049c13da4a9d28ac46dc70452, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

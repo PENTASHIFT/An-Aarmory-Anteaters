@@ -5,8 +5,8 @@ using TMPro;
 
 public class Currency : MonoBehaviour, IDataPersistence
 {
-    private int currency = 0;
-    public TextMeshProUGUI currencyText;
+    public int currency = 50000;
+    public TMP_Text currencyText;
 
     private void Awake(){
         currencyText = this.GetComponent<TextMeshProUGUI>();
@@ -28,5 +28,10 @@ public class Currency : MonoBehaviour, IDataPersistence
 
     public void AddCurrency(int amt){
         currency += amt;
+    }
+
+    public void SetCurrency(int amt)
+    {
+        currency = amt;
     }
 }
