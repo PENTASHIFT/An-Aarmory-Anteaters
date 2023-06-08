@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
-public class UIManager : MonoBehaviour
+
+public class UIManagerToo : MonoBehaviour
 {
     public float fadeTime = 1f;
     public CanvasGroup canvasGroup;
