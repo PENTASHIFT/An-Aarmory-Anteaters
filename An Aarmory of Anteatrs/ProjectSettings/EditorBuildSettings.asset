@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Prod/Home.unity
+    guid: 512e542d8d331fc44921aeee582b12ca
+  - enabled: 1
+    path: Assets/Scenes/Prod/Inventory.unity
+    guid: bdc60c59fdc172f48928d92c6b1bee1a
+  - enabled: 1
+    path: Assets/Scenes/Prod/Gacha.unity
+    guid: 2e521c47634421a4bb13b0501d453eed
+  - enabled: 1
+    path: Assets/Scenes/Prod/Settings.unity
+    guid: 6c8eed3234f0c5a4a96aa16f67a06d65
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 568551edb6e0f614a9e08a9b79b2ec84, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: d06638bc272942a49898bc3c726b0ab3, type: 2}
