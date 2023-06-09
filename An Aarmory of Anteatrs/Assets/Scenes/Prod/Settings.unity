@@ -2694,6 +2694,7 @@ MonoBehaviour:
   PetrToDisplay: {fileID: 1036372651}
   RewardPanel: {fileID: 1094576171}
   RewardText: {fileID: 1938788724}
+  dataPersistenceManager: {fileID: 74707103}
 --- !u!1 &1533302365
 GameObject:
   m_ObjectHideFlags: 0

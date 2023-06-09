@@ -13,7 +13,7 @@ using UnityEngine.Android;
 using ZXing;
 #endif
 
-public class CameraController : MonoBehaviour
+public class CameraController : MonoBehaviour, IDataPersistence
 {
     private bool camAvailable;
     private bool camRunning;
@@ -25,6 +25,9 @@ public class CameraController : MonoBehaviour
     public GameObject PetrToDisplay;
     public GameObject RewardPanel;
     public TMP_Text RewardText;
+
+    public Dictionary<int, int> petrDictionary;
+    public DataPersistenceManager dataPersistenceManager;
 
     string QrCode = string.Empty;
 
@@ -120,6 +123,17 @@ public class CameraController : MonoBehaviour
                 RewardText.text = "Congratulations, you got a " + pqc.ID;
                 RewardPanel.SetActive(true);
 
+                if (petrDictionary.ContainsKey(pqc.PetrWon.id))
+                {
+                    petrDictionary[pqc.PetrWon.id] += 1;
+                }
+                else
+                {
+                    petrDictionary.Add(pqc.PetrWon.id, 1);
+                }
+                
+                dataPersistenceManager.SaveGame();
+
                 break;
             }
         }
@@ -131,5 +145,15 @@ public class CameraController : MonoBehaviour
     public void OkButton()
     {
         RewardPanel.SetActive(false);
+    }
+
+    public void LoadData(GameData gameData)
+    {
+        this.petrDictionary = gameData.petrDictionary;
+    }
+
+    public void SaveData(GameData gameData)
+    {
+        gameData.petrDictionary = this.petrDictionary;
     }
 }

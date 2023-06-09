@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-
 public class DataPersistenceManager : MonoBehaviour
 {
     [Header("File Storage Config")]
@@ -43,8 +42,10 @@ public class DataPersistenceManager : MonoBehaviour
         foreach(IDataPersistence dataPersistenceObj in dataPersistenceObjects){
             dataPersistenceObj.LoadData(gameData);
         }
+
         Debug.Log("Everything Loaded!");
     }
+
     public void SaveGame(){
         if(gameData != null){
             //send gameData obj to all interfaces and make them save data

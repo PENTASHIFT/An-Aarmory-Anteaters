@@ -7,10 +7,15 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
 {
     //IMPORTANT when you come back
     //Make slots a prefab
-    public InventorySlot[] inventorySlots;
-    public GameObject inventoryItemPrefab;
+    public GameObject[] inventorySlots;
+    // public GameObject inventoryItemPrefab;
     public Dictionary<int, int> petrsDictionary;
     public Petr[] everyPetr;
+    
+    void Start()
+    {
+        displayInventory();
+    }
 
     //gacha manager will be calling AddPetr() whenever the player Gachas and gets another petr.
     public bool AddPetr(Petr petr){
@@ -21,9 +26,10 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         //We will go with UI code ran On-Demand, so we are separating
         petrsDictionary[petr.id] += 1;
         for(int i = 0; i < inventorySlots.Length; i++){
-            InventorySlot slot = inventorySlots[i];
-            InventoryItem item = slot.GetComponentInChildren<InventoryItem>();
-            if(item == null){
+            GameObject slot = inventorySlots[i];
+            // GameObject item = slot.GetComponentInChildren<GameObject>();
+            Image item = slot.GetComponent<Image>();
+            if(item.sprite == null){
                 SpawnNewPetr(petr, slot);
                 return true;
             }
@@ -38,9 +44,9 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
             petr = getPetrById(kvp.Key);
             for(int i = 0; i < kvp.Value; i++){
                 for(int j = 0; j < inventorySlots.Length; j++){
-                    InventorySlot slot = inventorySlots[j];
-                    InventoryItem item = slot.GetComponentInChildren<InventoryItem>();
-                    if(item == null){
+                    GameObject slot = inventorySlots[j];
+                    Image item = slot.GetComponent<Image>();
+                    if(item.sprite == null) {
                         SpawnNewPetr(petr, slot);
                         break;
                     }
@@ -64,15 +70,18 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
     //and you only update the inventory when a change happens, like you add a new petr or trade 2 in.
     // public bool DeletePetr() - affects amountCounter
 
-    private void SpawnNewPetr(Petr petr, InventorySlot slot){
-        GameObject obj = Instantiate(inventoryItemPrefab, slot.transform);
-        InventoryItem item = obj.GetComponent<InventoryItem>();
-        item.SetPetr(petr);
+    private void SpawnNewPetr(Petr petr, GameObject slot){
+        // GameObject obj = Instantiate(inventoryItemPrefab, slot.transform);
+        // Image item = obj.GetComponent<Image>();
+        // item.SetPetr(petr);
+        Image item = slot.GetComponent<Image>();
+        item.enabled = true;
+        item.sprite = petr.petrImage;
     }
 
-    public void DeletePetrInSlot(InventorySlot slotToDelete){
-        InventorySlot slot = slotToDelete;
-        InventoryItem petrInSlot = slot.GetComponentInChildren<InventoryItem>();
+    public void DeletePetrInSlot(GameObject slotToDelete){
+        GameObject slot = slotToDelete;
+        Image petrInSlot = slot.GetComponent<Image>();
         if(petrInSlot != null){
             Destroy(petrInSlot); 
         }
