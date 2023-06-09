@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+using TMPro;
+
 #if UNITY_ANDROID
 using UnityEngine.Android;
 
@@ -19,13 +21,16 @@ public class CameraController : MonoBehaviour
     private Texture defaultBackground;
 
     public RawImage background;
+    public PetrQrCode[] QrCodeToPetr;
+    public GameObject PetrToDisplay;
+    public GameObject RewardPanel;
+    public TMP_Text RewardText;
 
     string QrCode = string.Empty;
 
     void Start()
     {
 
-        // defaultBackground = background.texture;
         WebCamDevice[] devices = WebCamTexture.devices;
         Debug.LogFormat("background: {0}", background.enabled);
         
@@ -59,7 +64,7 @@ public class CameraController : MonoBehaviour
     {
         Debug.LogFormat("background: {0} {1}",
         background.rectTransform.rect.height, background.enabled);
-
+        
         if (!camAvailable)
         {
             Debug.Log("No camera available.");
@@ -101,12 +106,30 @@ public class CameraController : MonoBehaviour
             catch (Exception ex) { Debug.LogWarning(ex.Message); }
 
             yield return new WaitForSeconds(1);
-            // yield return null;
         }
 
         backCam.Stop();
         background.enabled = false;
 
+        foreach(PetrQrCode pqc in QrCodeToPetr)
+        {
+            if (pqc.ID == QrCode)
+            {
+                Image imageToDisplay = PetrToDisplay.GetComponent<Image>();
+                imageToDisplay.sprite = pqc.PetrWon.petrImage;
+                RewardText.text = "Congratulations, you got a " + pqc.ID;
+                RewardPanel.SetActive(true);
+
+                break;
+            }
+        }
+
         QrCode = string.Empty;
+        yield return null;
+    }
+
+    public void OkButton()
+    {
+        RewardPanel.SetActive(false);
     }
 }

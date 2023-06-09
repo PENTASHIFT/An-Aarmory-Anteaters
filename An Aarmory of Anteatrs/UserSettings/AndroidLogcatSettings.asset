@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "ZD2223X46M",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 7695,
+        "processId": 15684,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -210,6 +210,138 @@
             "deviceId": "ZD2223X46M",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 7695,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 13611,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 27555,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 28414,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 28970,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 29856,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 30282,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 30801,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 32210,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 1370,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 2385,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 3084,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 3479,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 3890,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 5151,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 6490,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 7160,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 12076,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 13354,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 13839,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 14284,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 14781,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 15684,
             "exited": false
         }
     ],

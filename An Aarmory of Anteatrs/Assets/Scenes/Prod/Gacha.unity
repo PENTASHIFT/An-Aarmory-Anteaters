@@ -766,22 +766,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petrRates:
+  - rarity: Legend
+    rate: 5
+    rewardPool:
+    - {fileID: 11400000, guid: 55e415b323fb7154dadda3b7352791b0, type: 2}
   - rarity: Ultra Rare
     rate: 10
     rewardPool:
     - {fileID: 11400000, guid: ea0a454ffebfa354f9ecc6979a63cc70, type: 2}
+    - {fileID: 11400000, guid: f916f2d2e1b8fc844bd305ce014030b1, type: 2}
   - rarity: Rare
     rate: 35
     rewardPool:
     - {fileID: 11400000, guid: 625f62eefb2ed4a418b6aaaebf9162d0, type: 2}
+    - {fileID: 11400000, guid: deab7551444706f44973e0a1e97a7b33, type: 2}
   - rarity: Uncommon
     rate: 60
     rewardPool:
     - {fileID: 11400000, guid: 793588f6783455f45a14faf93574c6a0, type: 2}
+    - {fileID: 11400000, guid: e23ed552963281f428ffddef4a5996a7, type: 2}
   - rarity: Common
     rate: 100
     rewardPool:
     - {fileID: 11400000, guid: 6b5a78bdeeb549847906b00137f9037a, type: 2}
+    - {fileID: 11400000, guid: 81413e159b5424b44a2ca6d855b2af5d, type: 2}
   petrWon: {fileID: 0}
   dataPersistenceManager: {fileID: 1044271862}
   petrDisplay: {fileID: 45187382}
