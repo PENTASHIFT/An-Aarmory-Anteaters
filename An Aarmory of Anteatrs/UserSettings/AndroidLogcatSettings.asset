@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "ZD2223X46M",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 15684,
+        "processId": 4261,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -342,6 +342,12 @@
             "deviceId": "ZD2223X46M",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 15684,
+            "exited": false
+        },
+        {
+            "deviceId": "ZD2223X46M",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 4261,
             "exited": false
         }
     ],

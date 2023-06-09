@@ -81,6 +81,8 @@ public class CameraController : MonoBehaviour, IDataPersistence
 
     IEnumerator GetQRCode()
     {
+    // Preprocessor to shut up the error.
+#if UNITY_ANDROID
         backCam.Play();
         background.enabled = true;
         background.texture = backCam;
@@ -113,6 +115,7 @@ public class CameraController : MonoBehaviour, IDataPersistence
 
         backCam.Stop();
         background.enabled = false;
+#endif
 
         foreach(PetrQrCode pqc in QrCodeToPetr)
         {
